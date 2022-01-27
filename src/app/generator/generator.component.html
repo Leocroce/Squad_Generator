@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Squad Generator</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Textarea</mat-label>
+    <textarea matInput placeholder="Insira aqui os nomes dos participantes"></textarea>
+  </mat-form-field>
+  <div>
+    <form>
+      <mat-form-field appearance="fill">
+        <mat-label>Select</mat-label>
+        <mat-select>
+          <mat-option value="one" #Squads>Número de Squads</mat-option>
+          <mat-option value="two" #Membros>Membros por squad</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label></mat-label>
+          <input #num="ngModel" max="10" min="1" class="form-control" name="num" matInput type="number" placeholder="1" [(ngModel)]="num">
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <button mat-raised-button color="primary" [disabled]="fieldBlanks" onclick="">Gerar</button>
+</div>
